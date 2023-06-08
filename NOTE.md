@@ -37,7 +37,7 @@ Transactions manage the changes that you perform in one or more systems. **The m
 
 Spring provides all the boilerplate code that’s required to start, commit, or rollback a transaction. It also integrates with Hibernate’s and JPA’s transaction handling. If you’re using Spring Boot, this reduces your effort to a ``@Transactional`` annotation on each interface, method, or class that shall be executed within a transactional context [[reference](https://thorben-janssen.com/transactions-spring-data-jpa/)].
 
-The ``@Transactional`` annotation **belongs to the Service layer** because it is the Service layer’s responsibility to define the transaction boundaries [[reference]](https://vladmihalcea.com/spring-transactional-annotation/).
+The ``@Transactional`` annotation **belongs to the Service layer** because it is the Service layer’s responsibility to define the transaction boundaries [[reference]](<https://vladmihalcea.com/spring-transactional-annotation/>).
 
 ## Demo
 
