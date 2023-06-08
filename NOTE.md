@@ -31,6 +31,14 @@ JPA defines **four association mapping constructs**:
 
 To be able to query data from DB we can either use native query or JPQL. Native query is just the regular SQL query statement, while JPQL (Java Persistence Querying Language) abstracts the common SQL syntax by subtracting database specific querying features, so it lacks support for Window Functions, Common Table Expressions, Derived tables or PIVOT.
 
+### Transaction Management
+
+Transactions manage the changes that you perform in one or more systems. **The main goal of a transaction is to provide ACID characteristics to ensure the consistency and validity of your data** [[reference](https://thorben-janssen.com/transactions-spring-data-jpa/)].
+
+Spring provides all the boilerplate code that’s required to start, commit, or rollback a transaction. It also integrates with Hibernate’s and JPA’s transaction handling. If you’re using Spring Boot, this reduces your effort to a ``@Transactional`` annotation on each interface, method, or class that shall be executed within a transactional context [[reference](https://thorben-janssen.com/transactions-spring-data-jpa/)].
+
+The ``@Transactional`` annotation **belongs to the Service layer** because it is the Service layer’s responsibility to define the transaction boundaries [[reference]](https://vladmihalcea.com/spring-transactional-annotation/).
+
 ## Demo
 
 ## Source
@@ -167,7 +175,7 @@ CREATE TABLE post_tag(
 3. [Learn JPA & Hibernate](https://www.baeldung.com/learn-jpa-hibernate)
 4. [The best way to map a @OneToMany relationship with JPA and Hibernate](https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/)
 5. [https://stackoverflow.com/a/25184489/5657159](https://stackoverflow.com/a/25184489/5657159)
-6. https://stackoverflow.com/a/25202635/5657159
+6. <https://stackoverflow.com/a/25202635/5657159>
 7. [JPA- Joining two tables in non-entity class](https://stackoverflow.com/questions/25179180/jpa-joining-two-tables-in-non-entity-class/25184489#25184489)
 
 ### one-to-one Association
@@ -176,7 +184,7 @@ CREATE TABLE post_tag(
 2. [1-to-1 relationship in PostgreSQL for real](https://www.cybertec-postgresql.com/en/1-to-1-relationship-in-postgresql-for-real/)
 3. [The best way to map a @OneToOne relationship with JPA and Hibernate](https://vladmihalcea.com/the-best-way-to-map-a-onetoone-relationship-with-jpa-and-hibernate/)
 4. [What is the most recommended way to store time in PostgreSQL using Java?](https://stackoverflow.com/a/6627999/5657159)
-5. https://dba.stackexchange.com/questions/253429/when-the-primary-key-is-also-the-foreign-key-in-postgres
+5. <https://dba.stackexchange.com/questions/253429/when-the-primary-key-is-also-the-foreign-key-in-postgres>
 6. [Hibernate Tips: How to Share the Primary Key in a One-to-One Association](https://thorben-janssen.com/hibernate-tips-same-primary-key-one-to-one-association/)
 
 ### many-to-many Associtation
@@ -184,6 +192,11 @@ CREATE TABLE post_tag(
 1. [The best way to map a JPA and Hibernate many-to-many association with extra columns](https://vladmihalcea.com/the-best-way-to-map-a-many-to-many-association-with-extra-columns-when-using-jpa-and-hibernate/)
 2. [Many-To-Many Relationship in JPA](https://www.baeldung.com/jpa-many-to-many)
 3. [Add unique constraint to combination of two columns](https://stackoverflow.com/questions/15800250/add-unique-constraint-to-combination-of-two-columns)
+
+### Transaction
+
+1. [Managing Transactions with Spring and Spring Data JPA](https://thorben-janssen.com/transactions-spring-data-jpa/)
+2. [The best way to use the Spring Transactional annotation](https://vladmihalcea.com/spring-transactional-annotation/)
 
 ### Miscleneous
 
